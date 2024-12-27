@@ -5,6 +5,7 @@ import { education, certificates } from "@cv"
 ---
 <Section title="Educación">
     <ul>
+        <h3 class="tipo">Titulada</h3>
         {
             education.map(
                 ({institution, area, endDate, studyType}) => {
@@ -29,6 +30,7 @@ import { education, certificates } from "@cv"
                 }
             )
         }
+        <h3 class="tipo">Cursos</h3>
         {
             certificates.map(
                 ({name, date, issuer}) => {
@@ -60,7 +62,7 @@ import { education, certificates } from "@cv"
     ul{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 
     article h3{
@@ -95,5 +97,18 @@ import { education, certificates } from "@cv"
 		font-size: 0.9rem;
 		line-height: 1.5;
         margin-bottom: 0.625rem;
+    }
+
+    .tipo{
+        color: #444;
+        line-height: 1.5;
+        width: 100%;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    @media screen and (max-width: 442px) {
+        header div{
+            width: 150px;
+        }
     }
 </style>
