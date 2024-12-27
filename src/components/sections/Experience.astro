@@ -1,0 +1,85 @@
+---
+import Section from "@astro/components/Section.astro"
+
+import { work } from "@cv"
+---
+<Section title="Experiencia laboral">
+    <ul>
+        {
+            work.map(
+                ({name, startDate, endDate, position, summary}) => {
+                    const startYear = new Date(startDate).getFullYear()
+                    const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual"
+                    const years = `${startYear} - ${endYear}`
+
+                    return(
+                        <li>
+                            <article>
+                                <header>
+                                    <div>
+                                        <h3>{name}</h3>
+                                        <h4>{position}</h4>
+                                    </div> 
+
+                                    <time>{years}</time>
+                                </header>
+
+                                <footer>
+                                    {
+                                        Array.isArray(summary) ?
+                                        summary.map(item => 
+                                            <ul>
+                                                <li>{item}</li>
+                                            </ul>) :
+                                        <p>{summary}</p>
+                                    }                     
+                                </footer>
+                            </article>
+                        </li>
+                    )
+                }
+            )
+        }
+    </ul>
+</Section>
+
+<style>
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    article h3{
+        font-weight: 500;
+        color: #111;
+        margin-bottom: 5px;
+    }
+
+    article h4{
+        font-weight: 400;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    time{
+        color: #555;
+        font-size: 0.85rem;
+    }
+
+    footer ul li{
+        list-style: disc;
+        margin-left: 1rem;
+        color: #666;
+		font-size: 0.9rem;
+		line-height: 1.5;
+        margin-bottom: 0.625rem;
+    }
+</style>

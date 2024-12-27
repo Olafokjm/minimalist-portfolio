@@ -1,0 +1,25 @@
+---
+import Section from "@astro/components/Section.astro"
+
+import { basics } from "@cv"
+const { summary } = basics
+---
+<Section title="Sobre mí">
+    <div class="about">
+        {
+            Array.isArray(summary) ? 
+            summary.map(item =>
+                <p>{item}</p>
+            ) :
+            <p>{summary}</p>
+        }
+    </div>
+</Section>
+
+<style>
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>

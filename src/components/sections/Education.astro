@@ -1,0 +1,99 @@
+---
+import Section from "@astro/components/Section.astro"
+
+import { education, certificates } from "@cv"
+---
+<Section title="Educación">
+    <ul>
+        {
+            education.map(
+                ({institution, area, endDate, studyType}) => {
+                    return(
+                        <li>
+                            <article>
+                                <header>
+                                    <div>
+                                        <h3>{area}</h3>
+                                        <h4>{institution}</h4>
+                                    </div> 
+
+                                    <time>{endDate}</time>
+                                </header>
+
+                                <footer>
+                                                    
+                                </footer>
+                            </article>
+                        </li>
+                    )
+                }
+            )
+        }
+        {
+            certificates.map(
+                ({name, date, issuer}) => {
+                    return(
+                        <li>
+                            <article>
+                                <header>
+                                    <div>
+                                        <h3>{name}</h3>
+                                        <h4>{issuer}</h4>
+                                    </div> 
+
+                                    <time>{date}</time>
+                                </header>
+
+                                <footer>
+                                                    
+                                </footer>
+                            </article>
+                        </li>
+                    )
+                }
+            )
+        }
+    </ul>
+</Section>
+
+<style>
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    article h3{
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 5px;
+        text-wrap: wrap;
+    }
+
+    article h4{
+        font-weight: 400;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    time{
+        color: #555;
+        font-size: 0.85rem;
+    }
+
+    footer ul li{
+        list-style: disc;
+        margin-left: 1rem;
+        color: #666;
+		font-size: 0.9rem;
+		line-height: 1.5;
+        margin-bottom: 0.625rem;
+    }
+</style>

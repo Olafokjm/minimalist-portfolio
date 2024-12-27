@@ -1,0 +1,217 @@
+{
+    "basics": {
+        "name": "Kevin Julio Muñoz",
+        "label": "Tecnólogo en electromecánica • desarrollador Front-end",
+        "image": "https://ii.ct-stc.com/1/logos/candidates/2024/08/26/115412_tecnologo-en-electromecanica-b8d5f5e762d6f71561373e686dcf3405thumbnail.jpg",
+        "email": "juliokjm@gmail.com",
+        "phone": "3106086321",
+        "url": "",
+        "summary": [
+            "Tecnólogo en Electromecánica con más de 12 años de experiencia en la Armada Nacional, especializado en el mantenimiento y optimización de sistemas de propulsión, generación eléctrica y automatización en entornos marítimos, fluviales y terrestres. Además, cuento con amplia experiencia en atención al cliente, brindando soluciones efectivas y personalizadas, siempre con un enfoque en aumentar la productividad y eficiencia del equipo de trabajo.",
+            "En el ámbito del desarrollo y la programación, soy capaz de diseñar e implementar aplicaciones innovadoras que resuelvan necesidades específicas, con un enfoque en la mejora de procesos y la optimización tecnológica para lograr resultados eficientes y escalables. Mi compromiso con la tecnología y el aprendizaje continuo me permite aportar soluciones vanguardistas adaptadas a las exigencias del mercado actual."],
+        "location": {
+            "address": "Barrio Alto bosque",
+            "postalCode": "130001",
+            "city": "Cartagena",
+            "department": "Bolivar"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "kevinjm",
+                "url": "https://linkedin.com/in/kevinjm"
+            },
+            {
+                "network": "Github",
+                "username": "olafokjm",
+                "url": "https://github.com/olafokjm"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Armada Nacional de Colombia",
+            "position": "Suboficial Naval - Electromecánica",
+            "startDate": "2005-01-08",
+            "endDate": "2018-08-18",
+            "summary": 
+                [
+                    "Responder por el alistamiento, operación y mantenimiento de la maquinaria de propulsión, manteniendo el máximo grado de alistamiento de la unidad.",
+                    "Responder por los sistemas de generación y distribución eléctrica, aires acondicionados, refrigeración y controles automáticos, manteniendo operativa la unidad.",
+                    "Planeación y distribución de trabajos de mantenimiento correctivo y preventivo de los sistemas de la unidad al personal de subalternos.",
+                    "Corrección de distintas fallas y deficiencias que se encuentren en los equipos asignados.",
+                    "Manejo del ingreso y salida del material, inventario de repuestos y combustible de la unidad, manteniendo estricto control del mismo.",
+                    "Dar estricto manejo, control y archivo de la documentación de acuerdo a las normas de gestión documental.",
+                    "Dar respuesta oportuna a los plazos y solicitudes que se requieran acuerdo el cronograma establecido."
+                ],
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "name": "Teleperformance",
+            "position": "Supervisor",
+            "startDate": "2019-08-18",
+            "endDate": "2024-03-14",
+            "summary": 
+            [
+                "Apoyar, motivar, evaluar, desarrollar y entrenar a los agentes a cargo para cumplir y superar las metas individuales y del equipo.",
+                "Proporcionar apoyo en \"tiempo real\" a los agentes que tengan dificultades en los casos presentados para poder resolverlos de la mejor manera.",
+                "Completar el monitoreo regular de los contactos manejados por el equipo y brindar comentarios, capacitación y educación adecuados para garantizar que los agentes cumplan con los requisitos mínimos del cliente.",
+                "Mantener y brindar de manera proactiva los niveles de servicio requeridos, mientras se maximiza la productividad en el equipo para garantizar el margen operativo deseado."
+            ],
+            "highlights": [
+                "Started the company"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Escuela Naval de Suboficiales ARC Barranquilla",
+            "url": "",
+            "area": "Tecnología Naval en Electromecánica",
+            "studyType": "Tecnólogo",
+            "endDate": "Junio 2011"
+        },
+        {
+            "institution": "Servicio Nacional de Aprendizaje - SENA",
+            "url": "",
+            "area": "Tecnología en análisis y desarrollo de software",
+            "studyType": "Tecnólogo",
+            "endDate": "En curso"
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Introducción a la programación HTML con CSS",
+            "date": "Noviembre 2011",
+            "issuer": "Colsubsidio educación tecnológica - CET",
+            "url": ""
+
+        },
+        {
+            "name": "Programación web con PHP",
+            "date": "Marzo 2022",
+            "issuer": "Servicio Nacional de aprendizaje - SENA",
+            "url": ""
+
+        },
+        {
+            "name": "Especialización desarrollo web Front end",
+            "date": "Mayo 2023",
+            "issuer": "Oracle next education & Alura Latam",
+            "url": ""
+        },
+        {
+            "name": "Diplomado en gestión integral del talento humano",
+            "date": "Julio 2024",
+            "issuer": "Cedesarrollo - Comfenalco",
+            "url": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "level": "Intermedio",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "CSS",
+            "level": "Intermedio",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend",
+                "Diseño responsive"
+            ]
+        },
+        {
+            "name": "PHP",
+            "level": "Básico",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "Javascript",
+            "level": "Básico",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend"
+            ]
+        },
+        {
+            "name": "Bootstrap",
+            "level": "Básico",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend",
+                "Diseño responsive",
+                "CSS Framework"
+            ]
+        },
+        {
+            "name": "React",
+            "level": "Básico",
+            "keywords": [
+                "Desarrollo web",
+                "Frontend",
+                "Framework"
+            ]
+        },
+        {
+            "name": "Inglés - imtermedio",
+            "level": "Intermedio"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Inglés",
+            "fluency": "Intermedio"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": [
+                "Ferrets",
+                "Unicorns"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference…"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Deditos D'Iris",
+            "description": "Página creada como proyecto de venta de pasabocas congelados y/o listos para comer.",
+            "highlights": [
+                "HTML", "CSS", "Bootstrap"
+            ],
+            "url": "https://d-iris.vercel.app/"
+        },
+        {
+            "name": "Encriptador de texto",
+            "description": "Aplicación web que encripta y desencripta textos con una llave determinda dentro de la misma página.",
+            "highlights": [
+                "HTML", "CSS", "Javascript"
+            ],
+            "url": "https://olafokjm.github.io/encriptador/"
+        },
+        {
+            "name": "Cafetería Cartagena",
+            "description": "Plantilla creada para el uso de un restaurante o cafetería.",
+            "highlights": [
+                "HTML", "CSS", "JQuery"
+            ],
+            "url": "https://olafokjm.github.io/cafeteria/"
+        }
+    ]
+}
