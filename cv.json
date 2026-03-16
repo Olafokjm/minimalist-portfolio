@@ -2,7 +2,7 @@
     "basics": {
         "name": "Kevin Julio Muñoz",
         "label": "Tecnólogo Naval en electromecánica",
-        "image": "/assets/foto.jpg",
+        "image": "/foto.jpg",
         "email": "juliokjm@gmail.com",
         "phone": "3106086321",
         "url": "",
@@ -204,31 +204,31 @@
             "name": "Diplomado en gestión integral del talento humano",
             "date": "Julio 2024",
             "issuer": "Cedesarrollo - Comfenalco",
-            "url": "/assets/Diplomado_Gestion_talento_Humano.pdf"
+            "url": "/Diplomado_Gestion_talento_Humano.pdf"
         },
         {
             "name": "Especialización desarrollo web Front end",
             "date": "Mayo 2023",
             "issuer": "Oracle next education & Alura Latam",
-            "url": "/assets/Programa_oracle.pdf"
+            "url": "/Programa_oracle.pdf"
         },
         {
             "name": "Programación web con PHP",
             "date": "Marzo 2022",
             "issuer": "Servicio Nacional de aprendizaje - SENA",
-            "url": "/assets/PHP_SENA.pdf"
+            "url": "/PHP_SENA.pdf"
         },
         {
             "name": "Introducción a la programación HTML con CSS",
             "date": "Noviembre 2021",
             "issuer": "Colsubsidio educación tecnológica - CET",
-            "url": "/assets/html-css.pdf"
+            "url": "/html-css.pdf"
         },
         {
             "name": "Tecnología Naval en Electromecánica",
             "date": "Junio 2011",
             "issuer": "Escuela Naval de Suboficiales ARC Barranquilla",
-            "url": "/assets/Tecnologo_Naval_electromecanica.pdf"
+            "url": "/Tecnologo_Naval_electromecanica.pdf"
         }
     ]
 }
