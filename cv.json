@@ -2,7 +2,7 @@
     "basics": {
         "name": "Kevin Julio Muñoz",
         "label": "Tecnólogo Naval en electromecánica",
-        "image": "../assets/foto/foto.jpg",
+        "image": "src/assets/foto/foto.jpg",
         "email": "juliokjm@gmail.com",
         "phone": "3106086321",
         "url": "",
