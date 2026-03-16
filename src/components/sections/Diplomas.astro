@@ -1,0 +1,266 @@
+---
+import Section from "@astro/components/Section.astro"
+
+import { diplomas } from "@cv"
+---
+
+<Section title="Diplomas y certificaciones" class="no-print">
+    <ul class="diplomaGrid">
+        {
+            diplomas.map(({ name, url, issuer, date }) => {
+                return (
+                    <li>
+                        <button
+                            type="button"
+                            class="diplomaCard"
+                            data-url={url}
+                            data-title={name}
+                            data-issuer={issuer}
+                            data-date={date}
+                        >
+                            <div class="cardContent">
+                                <h3>{name}</h3>
+                                <p class="issuer">{issuer}</p>
+                                <p class="date">{date}</p>
+                            </div>
+                        </button>
+                    </li>
+                )
+            })
+        }
+    </ul>
+
+    <div id="diplomaModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modalOverlay" data-close></div>
+        <div class="modalContent">
+            <header class="modalHeader">
+                <div>
+                    <h3 id="modalTitle">Diploma</h3>
+                    <p id="modalSubtitle" class="modalSubtitle"></p>
+                </div>
+                <button type="button" class="closeBtn" aria-label="Cerrar modal" data-close>&times;</button>
+            </header>
+            <div class="modalBody">
+                <iframe id="modalFrame" src="" title="Diploma" frameborder="0" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('diplomaModal') as HTMLDivElement | null
+        const frame = document.getElementById('modalFrame') as HTMLIFrameElement | null
+        const title = document.getElementById('modalTitle') as HTMLElement | null
+        const subtitle = document.getElementById('modalSubtitle') as HTMLElement | null
+
+        type DiplomaInfo = {
+            url: string
+            title: string
+            issuer?: string
+            date?: string
+        }
+
+        const openModal = ({ url, title: diplomaTitle, issuer, date }: DiplomaInfo) => {
+            if (!modal || !frame || !title || !subtitle) return
+
+            frame.src = url
+            title.textContent = diplomaTitle
+            subtitle.textContent = `${issuer ?? ''}${issuer && date ? ' · ' : ''}${date ?? ''}`
+            modal.setAttribute('aria-hidden', 'false')
+            modal.classList.add('open')
+            document.body.style.overflow = 'hidden'
+        }
+
+        const closeModal = () => {
+            if (!modal || !frame) return
+
+            modal.setAttribute('aria-hidden', 'true')
+            modal.classList.remove('open')
+            frame.src = ''
+            document.body.style.overflow = ''
+        }
+
+        const onCardClick = (event: Event) => {
+            const card = event.currentTarget as HTMLElement
+            const url = card.dataset.url
+            const name = card.dataset.title
+            const issuer = card.dataset.issuer
+            const date = card.dataset.date
+            if (!url || !name) return
+            openModal({ url, title: name, issuer, date })
+        }
+
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (!modal) return
+            if (event.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal()
+            }
+        }
+
+        const init = () => {
+            document.querySelectorAll('.diplomaCard').forEach(card => {
+                card.addEventListener('click', onCardClick)
+            })
+
+            if (modal) {
+                modal.addEventListener('click', (event) => {
+                    const target = event.target as HTMLElement | null
+                    if (target?.closest('[data-close]')) {
+                        closeModal()
+                    }
+                })
+            }
+
+            document.addEventListener('keydown', onKeyDown)
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init)
+        } else {
+            init()
+        }
+    </script>
+
+    <style>
+        ul.diplomaGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul.diplomaGrid > li {
+            display: flex;
+        }
+
+        .diplomaCard {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .9);
+            text-align: left;
+            cursor: pointer;
+            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .diplomaCard:hover,
+        .diplomaCard:focus-visible {
+            background: #eee;
+            border: 1px solid #ddd;
+        }
+
+        .cardContent {
+            flex: 1;
+        }
+
+        .cardContent h3 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+            line-height: 1.3;
+        }
+
+        .issuer,
+        .date {
+            margin: 0;
+            font-size: .9rem;
+            opacity: .8;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1200;
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modalOverlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .55);
+            backdrop-filter: blur(3px);
+            cursor: pointer;
+        }
+
+        .modalContent {
+            position: relative;
+            width: min(960px, 90vw);
+            height: min(720px, 80vh);
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 18px 30px rgba(0, 0, 0, .25);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        .modalHeader {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 16px 18px;
+            gap: 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+        }
+
+        .modalHeader h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .modalSubtitle {
+            margin: 6px 0 0;
+            font-size: .9rem;
+            opacity: .8;
+        }
+
+        .closeBtn {
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px 8px;
+            color: rgba(0, 0, 0, .65);
+        }
+
+        .closeBtn:hover {
+            color: rgba(0, 0, 0, .9);
+        }
+
+        .modalBody {
+            flex: 1;
+            background: #fafafa;
+        }
+
+        .modalBody iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 480px) {
+            .modalContent {
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+            }
+
+            .modalHeader {
+                padding: 12px;
+            }
+        }
+    </style>
+</Section>
+

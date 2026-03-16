@@ -1,8 +1,8 @@
 {
     "basics": {
         "name": "Kevin Julio Muñoz",
-        "label": "Tecnólogo en electromecánica • desarrollador Front-end",
-        "image": "https://ii.ct-stc.com/1/logos/candidates/2024/08/26/115412_tecnologo-en-electromecanica-b8d5f5e762d6f71561373e686dcf3405thumbnail.jpg",
+        "label": "Tecnólogo Naval en electromecánica",
+        "image": "src/assets/foto/foto.jpg",
         "email": "juliokjm@gmail.com",
         "phone": "3106086321",
         "url": "",
@@ -20,11 +20,6 @@
                 "network": "LinkedIn",
                 "username": "kevinjm",
                 "url": "https://linkedin.com/in/kevinjm1987"
-            },
-            {
-                "network": "Github",
-                "username": "olafokjm",
-                "url": "https://github.com/olafokjm"
             }
         ]
     },
@@ -45,7 +40,7 @@
                     "Dar respuesta oportuna a los plazos y solicitudes que se requieran acuerdo el cronograma establecido."
                 ],
             "highlights": [
-                "Started the company"
+                ""
             ]
         },
         {
@@ -61,9 +56,24 @@
                 "Mantener y brindar de manera proactiva los niveles de servicio requeridos, mientras se maximiza la productividad en el equipo para garantizar el margen operativo deseado."
             ],
             "highlights": [
-                "Started the company"
+                ""
             ]
-        }
+        },
+            {
+                "name": "Lean Solutions",
+                "position": "Planning Support",
+                "startDate": "2025-04-07",
+                "endDate": "",
+                "summary": 
+                [
+                    "Previsión de la Demanda (Forecasting): Desarrollar pronósticos de ventas a corto, mediano y largo plazo utilizando modelos estadísticos, datos históricos, tendencias del mercado y factores externos.",
+                    "Gestión de Inventarios: Alinear los niveles de existencias con la previsión para evitar roturas de stock (escasez) y reducir el exceso de inventario.",
+                    "Liderar o participar en reuniones de planificación de ventas y operaciones, integrando información de ventas y marketing sobre promociones, lanzamientos o nuevas cuentas."
+                ],
+                "highlights": [
+                    ""
+                ]
+            }
     ],
     "education": [
         {
@@ -111,60 +121,19 @@
     ],
     "skills": [
         {
-            "name": "HTML",
-            "level": "Intermedio",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend"
-            ]
+            "name": "Comunicación efectiva"
         },
         {
-            "name": "CSS",
-            "level": "Intermedio",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend",
-                "Diseño responsive"
-            ]
+            "name": "Trabajo en equipo"
         },
         {
-            "name": "PHP",
-            "level": "Básico",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend"
-            ]
+            "name": "Resolución de problemas"
         },
         {
-            "name": "Javascript",
-            "level": "Básico",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend"
-            ]
+            "name": "Liderazgo"
         },
         {
-            "name": "Bootstrap",
-            "level": "Básico",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend",
-                "Diseño responsive",
-                "CSS Framework"
-            ]
-        },
-        {
-            "name": "React",
-            "level": "Básico",
-            "keywords": [
-                "Desarrollo web",
-                "Frontend",
-                "Framework"
-            ]
-        },
-        {
-            "name": "Inglés - imtermedio",
-            "level": "Intermedio"
+            "name": "Adaptabilidad"
         }
     ],
     "languages": [
@@ -184,8 +153,24 @@
     ],
     "references": [
         {
-            "name": "Jane Doe",
-            "reference": "Reference…"
+            "name": "Larry Julio Muñoz",
+            "reference": "Referencia familiar",
+            "contact": "3004660745"
+        },
+        {
+            "name": "Laury Katherine Julio Muñoz",
+            "reference": "Referencia familiar",
+            "contact": "3167529072"
+        },
+        {
+            "name": "Emilio Suárez",
+            "reference": "Referencia laboral",
+            "contact": "3008821733"
+        },
+        {
+            "name": "Bryan Hernández",
+            "reference": "Referencia laboral",
+            "contact": "3209796859"
         }
     ],
     "projects": [
@@ -212,6 +197,38 @@
                 "HTML", "CSS", "JQuery"
             ],
             "url": "https://olafokjm.github.io/cafeteria/"
+        }
+    ],
+    "diplomas": [
+        {
+            "name": "Diplomado en gestión integral del talento humano",
+            "date": "Julio 2024",
+            "issuer": "Cedesarrollo - Comfenalco",
+            "url": "src/assets/diplomas/Diplomado_Gestion_talento_Humano.pdf"
+        },
+        {
+            "name": "Especialización desarrollo web Front end",
+            "date": "Mayo 2023",
+            "issuer": "Oracle next education & Alura Latam",
+            "url": "src/assets/diplomas/Programa_oracle.pdf"
+        },
+        {
+            "name": "Programación web con PHP",
+            "date": "Marzo 2022",
+            "issuer": "Servicio Nacional de aprendizaje - SENA",
+            "url": "src/assets/diplomas/PHP_SENA.pdf"
+        },
+        {
+            "name": "Introducción a la programación HTML con CSS",
+            "date": "Noviembre 2021",
+            "issuer": "Colsubsidio educación tecnológica - CET",
+            "url": "src/assets/diplomas/html-css.pdf"
+        },
+        {
+            "name": "Tecnología Naval en Electromecánica",
+            "date": "Junio 2011",
+            "issuer": "Escuela Naval de Suboficiales ARC Barranquilla",
+            "url": "src/assets/diplomas/Tecnologo_Naval_electromecanica.pdf"
         }
     ]
 }

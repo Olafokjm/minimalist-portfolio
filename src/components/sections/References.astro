@@ -1,0 +1,48 @@
+---
+import Section from "@astro/components/Section.astro"
+
+import { references } from "@cv"
+
+const groupedReferences = Object.entries(
+    references.reduce((acc, { reference, name, contact }) => {
+        if (!acc[reference]) acc[reference] = []
+        acc[reference].push({ name, contact })
+        return acc
+    }, {} as Record<string, Array<{ name: string; contact: string }>>)
+)
+---
+<Section title="Referencias">
+    {
+        groupedReferences.map(([reference, items]) => (
+            <article class="group">
+                <h3>{reference}</h3>
+                <ul>
+                    {items.map(({ name, contact }) => (
+                        <li>
+                            <span>{name}</span>
+                            <p>Cel: {contact}</p>
+                        </li>
+                    ))}
+                </ul>
+            </article>
+        ))
+    }
+</Section>
+
+<style>
+    ul{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    li{
+        color: black;
+        font-weight: 500;
+        padding: 0.6rem;
+    }
+
+    p{
+        margin-top: 4px;
+        color: #666;
+        font-size: 0.8rem;
+    }
+</style>
